@@ -153,5 +153,8 @@ class syntax_plugin_latex_common extends DokuWiki_Syntax_Plugin {
 		if(@mkdir($path,$dmask) or file_exists($path)) return true;
 		return ($this->_mkpath(dirname($path),$dmask) and mkdir($path,$dmask));
 	}
-
+	
+	function handle($match, $state, $pos, Doku_Handler $handler){
+                return array();
+        }
 }
